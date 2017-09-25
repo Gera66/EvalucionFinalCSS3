@@ -1,8 +1,10 @@
 body{
     width:100%;
-    background-color: black;
-    margin: 0px; 
-
+    margin: 0px;  
+    /*consideración general*/
+    background-color:  #02010a;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;
 }
 
 /*cabecera*/
@@ -14,7 +16,6 @@ header{
     border-top-left-radius: 10px;
     height: 70px;
     position: relative;
-    font-style: italic;
     margin: 0px;
     padding: 10px;
     border: 0px;
@@ -63,7 +64,7 @@ header>a:hover{
     text-align: center;
     padding: 20px 0px 20px 0px;
 }
-        /*transform img1*/
+/*transform img1*/
 img[src^='imagenes/img1']{
     transition: transform 1s;
 }
@@ -73,7 +74,7 @@ img[src^='imagenes/img1']:hover{
     border: 2px solid #82c3a6;
 }
 
-        /*transform img2*/
+/*transform img2*/
 img[src^='imagenes/img2']{
     transition: transform 1s;
 }
@@ -82,42 +83,64 @@ img[src^='imagenes/img2']:hover{
     box-shadow: 2px 2px 2px  #82c3a6;
     border: 2px solid #82c3a6;
 }        
-        
-        
+
+
 img[src^='imagenes/img']{
     width: 70%;
-    box-shadow: 2px 2px 2px black;
     border: 1px solid black;
 }
 
 a[href^='hola']{
     color: black;
 }
-
+/*condiciones generales*/
+img{
+    box-shadow: 2px 2px 2px #02010a;
+}
 
 /*footer*/
+.contenedorpie{
+    -webkit-display: flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    background-color: #C6d5c5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+}
+.bloque1, .bloque2, .bloque3, .bloque4{
+    width: 25%;
+    text-align: center;
+}
 
 
 /*media queries*/
 
 /*menu dispositivos*/
-@media (max-width: 1024px){
+@media (max-width: 900px){
     header{
         height: 40px;
+        text-align: center;
     }
     header>a{
         display: none;
     }
     header>h1{
-        font-size: 16px;
+        font-size: 20px;
     }
-    
-/*imagenes en movil*/    
+
+    /*imagenes en movil*/    
     .imagen1, .imagen2{
-    width: 100%;
-    text-align: center;
-}
-img[src^='imagenes/img']{
-    width: 80%;
-}
+        width: 100%;
+        text-align: center;
+    }
+    img[src^='imagenes/img']{
+        width: 80%;
+    }
+    /*footer movil*/
+    .bloque1, .bloque2, .bloque3, .bloque4{
+        width: 100%;
+        text-align: center;
+    }
 }
