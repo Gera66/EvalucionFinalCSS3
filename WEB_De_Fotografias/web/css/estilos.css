@@ -19,7 +19,21 @@ header{
     padding: 10px;
     border: 0px;
     text-align: right;
+    animation: slidein 1s;
 }
+/*animacion*/
+@-webkit-keyframes slidein{
+    0%{
+        margin-top:150%;	
+    }
+    60%{
+        margin-top: -5%;	
+    }
+    100%{
+        margin-top: 0%;	
+    }			
+}
+
 header>h1{ 
     position: absolute;
 }
@@ -91,8 +105,9 @@ img[src^='imagenes/img']{
     border: 1px solid black;
 }
 
-a[href^='hola']{
+#vinculosimg{
     color: black;
+    font-size: 25px;
 }
 /*condiciones generales*/
 img{
@@ -159,6 +174,7 @@ img[src^='imagenes/peña']{
     -webkit-filter: sepia(90%);
 }
 
+
 /*media queries*/
 
 /*menu dispositivos*/
@@ -176,7 +192,7 @@ img[src^='imagenes/peña']{
         top: -12px;
         position: relative;
         font-size: 24px;
-        
+
     }
 
     /*imagenes en movil*/    
@@ -192,9 +208,14 @@ img[src^='imagenes/peña']{
         width: 100%;
         text-align: center;
     }
+    /*iconos responsivos a 16x16*/
+    img[src^='iconos']{
+        height: 16px;
+    }
+    
     /*galeria*/
     .img1, .img2, .img3, .img4, .img5, .img6{
-    width: 100%;
-    padding: 10px 0px 10px 0px;
-}
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+    }
 }
